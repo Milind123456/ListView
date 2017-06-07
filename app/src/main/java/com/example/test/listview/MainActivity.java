@@ -21,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     String[] memeTitles;
     String[] memeDescription;
-    int[] images = {R.drawable.p1,R.drawable.p2,R.drawable.p3,R.drawable.p4,R.drawable.p1,R.drawable.p2,R.drawable.p3,R.drawable.p4};
+    int[] images = {R.drawable.p1, R.drawable.p2, R.drawable.p3, R.drawable.p4, R.drawable.p1, R.drawable.p2, R.drawable.p3, R.drawable.p4};
     ListView l;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         memeTitles = res.getStringArray(R.array.titles);
         memeDescription = res.getStringArray(R.array.descriptions);
         l = (ListView) findViewById(R.id.listview);
-        milAdapter adapter = new milAdapter(this,memeTitles,images,memeDescription);
+        milAdapter adapter = new milAdapter(this, memeTitles, images, memeDescription);
         l.setAdapter(adapter);
 
     }
@@ -40,13 +41,14 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
-class milAdapter extends ArrayAdapter<String>{
+class milAdapter extends ArrayAdapter<String> {
     Context context;
     int[] images;
     String[] titleArray;
     String[] descriptionArray;
-    milAdapter(Context c , String[] titles,int imgs[],String[] desc){
-        super(c,R.layout.single_row,R.id.textView,titles);
+
+    milAdapter(Context c, String[] titles, int imgs[], String[] desc) {
+        super(c, R.layout.single_row, R.id.textView, titles);
         this.context = c;
         this.images = imgs;
         this.titleArray = titles;
@@ -56,9 +58,11 @@ class milAdapter extends ArrayAdapter<String>{
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View row = inflater.inflate(R.layout.single_row,parent,false);
-
+        View row = convertView;
+        if (row == null) {
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            row = inflater.inflate(R.layout.single_row, parent, false);
+        }
         ImageView image = (ImageView) row.findViewById(R.id.imageView);
         TextView myTitle = (TextView) row.findViewById(R.id.textView);
         TextView myDescription = (TextView) row.findViewById(R.id.textView2);
