@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">ListView</string>
+    <string-array name="titles">
+        <item>Meme 1</item>
+        <item>Meme 2</item>
+        <item>Meme 3</item>
+        <item>Meme 4</item>
+        <item>Meme 5</item>
+        <item>Meme 6</item>
+        <item>Meme 7</item>
+        <item>Meme 8</item>
+    </string-array>
+    <string-array name="descriptions">
+        <item>This is Meme 1</item>
+        <item>This is Meme 2</item>
+        <item>This is Meme 3</item>
+        <item>This is Meme 4</item>
+        <item>This is Meme 5</item>
+        <item>This is Meme 6</item>
+        <item>This is Meme 7</item>
+        <item>This is Meme 8</item>
+
+    </string-array>
 </resources>
