@@ -9,6 +9,14 @@
         <item>Meme 6</item>
         <item>Meme 7</item>
         <item>Meme 8</item>
+        <item>Meme 9</item>
+        <item>Meme 10</item>
+        <item>Meme 11</item>
+        <item>Meme 12</item>
+        <item>Meme 13</item>
+        <item>Meme 14</item>
+        <item>Meme 15</item>
+        <item>Meme 16</item>
     </string-array>
     <string-array name="descriptions">
         <item>This is Meme 1</item>
@@ -19,6 +27,14 @@
         <item>This is Meme 6</item>
         <item>This is Meme 7</item>
         <item>This is Meme 8</item>
+        <item>This is Meme 9</item>
+        <item>This is Meme 10</item>
+        <item>This is Meme 11</item>
+        <item>This is Meme 12</item>
+        <item>This is Meme 13</item>
+        <item>This is Meme 14</item>
+        <item>This is Meme 15</item>
+        <item>This is Meme 16</item>
 
     </string-array>
 </resources>
